@@ -1,0 +1,4 @@
+sku,food_brand,food_name,image_url,animal,min_age,max_age,min_weight,max_weight,allergies,health_issues
+B01MDQ7349,monge,Monge Adult Maxi Dog 12 kg,https://images-na.ssl-images-amazon.com/images/I/61cAztOGvmL._AC_SL1000_.jpg,dog,3,7,32,80,no,no
+B01FW4MNYE,monge,Monge Adult Medium 12 kg,https://images-na.ssl-images-amazon.com/images/I/81YGHoyxQCL._AC_SL1500_.jpg,dog,3,7,10,32,no,no
+B01EOFRVWQ,monge,Monge Dog Puppy and Junior Maxi 12 kg,https://images-na.ssl-images-amazon.com/images/I/61QWnHpju0L._AC_SL1000_.jpg,dog,0.3,3,32,80,no,no
