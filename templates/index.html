@@ -10,6 +10,7 @@
                     <div class="columns">
                         <div class="field">
                             <label class="label">Age</label>
+                            <label class="label">Age</label>
                             <div class="control">
                                 <input class="input" type="number" name="age" placeholder="Age" value="{{ dog_age }}">
                             </div>
@@ -77,9 +78,13 @@
                                 <p>
                                     <strong>{{ line.food_name }}</strong>
                                     <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
-                                    pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
-                                    facilisis.
+                                    <strong>For ages: {{ line.min_age }} - {{line.max_age }}</strong>
+                                    <br>
+                                    <strong>For weights: {{ line.min_weight }} - {{line.max_weight }} kg</strong>
+                                    <br>
+<!--                                    <strong>Description: {{line.description }}</strong>-->
+<!--                                    <br>-->
+<!--                                    <strong>Price range: {{ line.price_range }}</strong>-->
                                 </p>
                             </div>
                             <nav class="level is-mobile">
