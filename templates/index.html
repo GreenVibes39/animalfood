@@ -4,12 +4,23 @@
     {% extends "base.html" %}
     {% block content %}
 
-        <div class="container">
             <form>
+                <div class="container">
+                    <div class="field">
+                        <div class="control">
+                            <label class="label">My pet is a:</label>
+                            <div class="select is-primary">
+                                <select>
+                                <option>dog</option>
+                                    <option>cat</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                 <div class="columns">
-                    <div class="columns">
+                    <div class="column">
                         <div class="field">
-                            <label class="label">Age</label>
                             <label class="label">Age</label>
                             <div class="control">
                                 <input class="input" type="number" name="age" placeholder="Age" value="{{ dog_age }}">
@@ -17,7 +28,6 @@
                         </div>
                     </div>
                     <div class="column">
-
                         <div class="field">
                             <label class="label">Weight</label>
                             <div class="control">
@@ -28,34 +38,34 @@
                 </div>
 
 
-        <!--        <div class="field">-->
-        <!--            <div class="control">-->
-        <!--                <label class="checkbox">-->
-        <!--                    <input type="checkbox">-->
-        <!--                    I agree to the <a href="#">terms and conditions</a>-->
-        <!--                </label>-->
-        <!--            </div>-->
-        <!--        </div>-->
+<!--                <div class="field">-->
+<!--                    <div class="control">-->
+<!--                        <label class="checkbox">-->
+<!--                            <input type="checkbox">-->
+<!--                            I agree to the <a href="#">terms and conditions</a>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-        <!--        <div class="field">-->
-        <!--            <div class="control">-->
-        <!--                <label class="radio">-->
-        <!--                    <input type="radio" name="question">-->
-        <!--                    Yes-->
-        <!--                </label>-->
-        <!--                <label class="radio">-->
-        <!--                    <input type="radio" name="question">-->
-        <!--                    No-->
-        <!--                </label>-->
-        <!--            </div>-->
-        <!--        </div>-->
+<!--                <div class="field">-->
+<!--                    <div class="control">-->
+<!--                        <label class="radio">-->
+<!--                            <input type="radio" name="question">-->
+<!--                            Yes-->
+<!--                        </label>-->
+<!--                        <label class="radio">-->
+<!--                            <input type="radio" name="question">-->
+<!--                            No-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
 
                 <div class="field is-grouped">
                     <div class="control">
                         <input type="submit" class="button is-link" value="Submit">
                     </div>
                     <div class="control">
-                        <button class="button is-link is-light">Cancel</button>
+                        <button class="button is-link is-light">Clear</button>
                     </div>
                 </div>
 
@@ -65,6 +75,7 @@
             <section class="section">
                 <div class="container">
 
+                    <strong>Your pet should eat:</strong>
                     {% for line in data %}
 
                     <article class="media">
@@ -78,15 +89,15 @@
                                 <p>
                                     <strong>{{ line.food_name }}</strong>
                                     <br>
-                                    <strong>For ages: {{ line.min_age }} - {{line.max_age }}</strong>
+                                    <strong>For ages:</strong> {{ line.min_age }} - {{line.max_age }}
                                     <br>
-                                    <strong>For weights: {{ line.min_weight }} - {{line.max_weight }} kg</strong>
+                                    <strong>For weights:</strong> {{ line.min_weight }} - {{line.max_weight }} kg
                                     <br>
-                                    <strong>Description: {{line.description }}</strong>
+                                    <strong>Description:</strong> {{line.description }}
                                     <br>
-                                    <strong>Price range: {{ line.price_range }}</strong>
+                                    <strong>Price range:</strong> {{ line.price_range }}
                                     <br>
-                                    <strong>Purchase link: <a href= {{ line.>Shop Amazon</a></strong>
+                                    <strong>Purchase link: <a href= {{ line.purchase_link }} target="_blank">Shop Amazon</a></strong>
                                 </p>
                             </div>
                             <nav class="level is-mobile">
