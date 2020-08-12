@@ -13,7 +13,7 @@ def home():
 
     filtered = []
     for i in db:
-        print(i)
+        # print(i)
         if float(i['min_age']) > dog_age:
             continue
         if float(i['max_age']) < dog_age:
@@ -24,6 +24,9 @@ def home():
             continue
         print("added")
         filtered.append(i)
+
+
+
 
 
     return render_template('index.html', data=filtered, dog_age=dog_age, dog_weight=dog_weight)
